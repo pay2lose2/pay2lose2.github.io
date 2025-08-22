@@ -4,4 +4,9 @@
     align-items: center;
     text-align: center;
     gap: 3px;
+
+    a:hover {
+        background: none;
+        filter: brightness(80%);
+    }
 }

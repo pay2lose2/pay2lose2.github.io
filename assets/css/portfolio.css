@@ -1,7 +1,6 @@
 th, td {
     border: 1px solid var(--window-outline);
-    border-radius: 1vh;
-    padding: 3px 7px;
+    padding: 7px;
 
     img {
         width: 10%; 

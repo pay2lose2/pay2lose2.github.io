@@ -37,6 +37,11 @@
                     Blogs
                 </a>
 
+                <a href="me.html">
+                    <img src="assets/images/me.svg">
+                    About me
+                </a>
+
                 <div>
                     Social Media
                 </div>
@@ -59,25 +64,19 @@
 
             <section class="half">
                 <p>
-                    My name is pay2lose. (p2l, pee2loser, whatever.) I am a <span  style="color: rgb(255, 255, 255);">pol</span><span style="color: rgb(255, 0, 0);">ish</span> programmer and a okay-ish <span title="I am unfortunately aware of current roblox controversies that include them banning a pedophile catcher. I love this platform but god damn what Roblox is doing is really fucking disgusting." style="text-decoration: underline dotted; color: var(--rbx);">Roblox</span> UI Designer.
+                    Hello! My name is pay2lose. (p2l, pee2loser, whatever.) I am a <span style="color: rgb(255, 255, 255);">pol</span><span style="color: rgb(255, 0, 0);">ish</span> programmer and a okay-ish <span title="I am unfortunately aware of current roblox controversies that include them banning a pedophile catcher. I love this platform but god damn what Roblox is doing is really fucking disgusting." style="text-decoration: underline dotted; color: var(--rbx);">Roblox</span> UI Designer.
                     <br><br>
-                    I am available at <span style="color: #7388d9">discord</span>, tho might not respond because I have friend request ping disabled. Before you talk to me, please refer to <a href="https://nohello.net">nohello.net</a>
-                    <br><br>
-                    Current languages I know:
+                    This is my personal page where you can learn a bit more about me and also see what I'm up to.
+                    <br><Br>
+                    Current time in poland: <span id="time"></span>
+                    <br>
+                    <small>If it doesn't show the correct time, then you can also check it on <a href="https://time.is/warsaw">time.is</a></small>
                 </p>
-                <ul>
-                    <li>
-                        <span style="color: var(--luau)">LuaU</span> / <span style="color: var(--rbx)">Roblox</span> <span style="color: var(--lua)">Lua</span>
-                    </li>
-                    <li>
-                        <span style="color: var(--python1);">Pyt</span><span style="color: var(--python2);">hon</span>
-                    </li>
-                </ul>
             </section>
 
             <section class="small">
                 <p>
-                    Design: Ubuntu
+                    Design: <a href="https://kubuntu.org/">Kubuntu</a> (<a href="https://kde.org">KDE Plasma</a>)
                     <br><br>
                     Icons: 
                     <br>
@@ -86,8 +85,6 @@
                     <a href="https://icons8.com">Socials (icons8)</a>
                     <br><br>
                     Inspired by <a href="https://ribo.zone/free/layouts/cyanobacteria/preview">cyanobacteria.css</a>
-                    <br><Br>
-                    <strong>BEST VIEWING EXPERIENCE AT 1920x1080!</strong>
                 </p>
             </section>
 
@@ -100,5 +97,25 @@
         </div>
     </div>
 </body>
+    <script>
+        let time = document.getElementById("time")
 
+        function settime() {
+            const event = new Date();
+            const options = {
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit",
+                year: "numeric",
+                month: "numeric",
+                day: "numeric",
+                timeZone: "Europe/Warsaw"
+            };
+            let pltime = event.toLocaleString(undefined, options)
+
+            time.innerHTML = pltime
+        }
+
+        setInterval(settime, 100);
+    </script>
 </html>
