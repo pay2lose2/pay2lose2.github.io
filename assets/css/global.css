@@ -59,8 +59,8 @@ img { max-width: 100%; }
 pre { overflow-x: auto; }
 
 .window {
-    max-width: 900px;
-    margin: 10vh auto 10vh auto;
+    max-width: 1000px;
+    margin: 15vh auto 15vh auto;
     display: flex;
     gap: 5px;
     flex-wrap: wrap;
