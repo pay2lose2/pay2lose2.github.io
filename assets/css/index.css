@@ -1,5 +1,5 @@
 :root {
-    --audio-player-button-color: rgb(83, 86, 89);
+    --audio-player-button-color: var(--window-outline);
 }
 
 #eightyeightthirtyone {
@@ -17,19 +17,16 @@
 }
 
 .audio-player {
-    background-color: var(--section-background);
-    outline: solid var(--window-outline) 1px;
-    margin: 0px 6px; /* why tf does it need 6px instead of regular 5px */
-    /* height: 25px; */
     padding: 5px;
-    align-items: center;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
 
     #track-name {
+        font-family: "UbuntuMonospace", monospace;
         flex: 1 1 50%;
+        font-size: 1rem;
         /* width: 90%; */
         margin: 5px 0px;
     }
@@ -38,7 +35,6 @@
         background-color: var(--audio-player-button-color);
         flex: 1 1 10%;
         border: none;
-
     }
 
     button:hover {

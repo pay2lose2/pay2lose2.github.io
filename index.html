@@ -29,17 +29,17 @@
                 </div>
 
                 <a href="portfolio.html">
-                    <img src="assets/images/files.svg">
+                    <img src="assets/images/files.svg" id="themechange">
                     Portfolio
                 </a>
 
                 <a href="blogs.html">
-                    <img src="assets/images/blogs.svg">
+                    <img src="assets/images/blogs.svg" id="themechange">
                     Blogs
                 </a>
 
                 <a href="me.html">
-                    <img src="assets/images/me.svg">
+                    <img src="assets/images/me.svg" id="themechange">
                     About me
                 </a>
 
@@ -48,7 +48,7 @@
                 </div>
 
                 <a href="https://github.com/pay2lose2">
-                    <img src="assets/images/github.svg">
+                    <img src="assets/images/github.svg" id="themechange">
                     Github
                 </a>
 
@@ -65,7 +65,7 @@
 
             <section class="half">
                 <p>
-                    Hello! My name is pay2lose. (p2l, pee2loser, whatever.) I am a <span style="color: rgb(255, 255, 255);">pol</span><span style="color: rgb(255, 0, 0);">ish</span> programmer and a okay-ish <span title="I am unfortunately aware of current roblox controversies that include them banning a pedophile catcher. I love this platform but god damn what Roblox is doing is really fucking disgusting." style="text-decoration: underline dotted; color: var(--rbx);">Roblox</span> UI Designer.
+                    Hello! My name is pay2lose. (p2l, pee2loser, whatever.) I am a <span style="color: var(--pl1);">pol</span><span style="color: var(--pl2);">ish</span> programmer and a okay-ish <span title="I am unfortunately aware of current roblox controversies that include them banning a pedophile catcher. I love this platform but god damn what Roblox is doing is really fucking disgusting (even outside the current situation)." style="text-decoration: underline dotted; color: var(--rbx);">Roblox</span> UI Designer.
                     <br><br>
                     This is my personal page where you can learn a bit more about me and also see what I'm up to.
                     <br><Br>
@@ -89,16 +89,16 @@
                 </p>
             </section>
 
-            <div class="audio-player full">
+            <section class="audio-player full">
                 <button onclick="playLastSong()">&leftarrow;</button>
-                <marquee id="track-name" scrollamount="5">Auto Pilot - Seventeen.mp3 (NaN)</marquee>
+                <marquee id="track-name" scrollamount="3">Auto Pilot - Seventeen.mp3 (NaN)</marquee>
                 <button onclick="playNextSong()">&rightarrow;</button>
                 <audio id="audio" src="./assets/music/Auto Pilot - Seventeen.mp3" controls autoplay></audio> 
                 <!-- will load auto pilot in case where you disabled javascript :thumbs_up: -->
-            </div>
+            </section>
 
             <section class="full" id="eightyeightthirtyone">
-                <a href="https://firefox.org"><img src="./assets/88x31/ff.png" alt="firefox.org"></img></a> 
+                <a href="https://firefox.com"><img src="./assets/88x31/ff.png" alt="firefox.com - lis ogień 🔥🔥🔥🔥"></img></a> 
                 <!-- 
                     <a href="https://vivaldi.com"><img src="./assets/88x31/vivaldi.gif" alt="vivaldi.com"></img></a> 
 
@@ -117,5 +117,5 @@
     </div>
 </body>
 <script src="./assets/scripts/index_timer.js"></script>
-<script src="./assets/scripts/index_song_rng.js"></script>
+<script src="./assets/scripts/index_song.js"></script>
 </html>

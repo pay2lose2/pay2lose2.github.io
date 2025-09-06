@@ -1,5 +1,5 @@
 :root {
-    --text-color: rgb(255,255,255);
+    --text-color: rgb(255, 255, 255);
     --accent-color: rgb(61, 174, 233);
 
     --window-background: rgb(32, 35, 38);
@@ -17,10 +17,12 @@
     --header-border: var(--window-outline);
 
     --section-background: rgb(41, 44, 48);
-    --section-outline: rgb(83, 86, 89);
+    --section-outline: var(--window-outline);
 
     --link-button-background: rgba(61, 174, 233, 0.2);
-    
+
+    --pl1: rgb(255, 255, 255);
+    --pl2: rgb(255, 0, 0);
     --lua: rgb(110, 110, 238);
     --luau: rgb(0, 162, 255);
     --python1: rgb(55, 113, 162);
@@ -55,11 +57,56 @@ body {
     background-size: cover;
 }
 
-img { max-width: 100%; }
-pre { overflow-x: auto; }
+@media (prefers-color-scheme: light) {
+    :root {
+        --text-color: rgb(0, 0, 0);
+        --accent-color: rgb(61, 174, 233);
+
+        --window-background: rgb(223, 220, 217);
+        --window-outline: rgb(172, 169, 166);
+
+        --title-bar-background: rgb(214, 211, 207);
+        --title-bar-bottom-line: var(--window-outline);
+
+        --title-bar-return: #000;
+
+        --section-background: rgb(214, 211, 207);
+        --section-outline: var(--window-outline);
+
+        --link-button-background: rgba(61, 174, 233, 0.4);
+    }
+
+    body {
+        background-image: url("../images/bg_light.png");
+    }
+
+    #return {
+        img {
+            filter: brightness(0%);
+        }
+    }
+
+    #return:hover {
+        img {
+            filter: brightness(1) !important;
+        }
+    }
+
+    #themechange {
+        filter: invert();
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+pre {
+    overflow-x: auto;
+}
 
 .window {
-    max-width: 1000px;
+    max-width: 900px;
     margin: 15vh auto 15vh auto;
     display: flex;
     gap: 5px;
@@ -76,7 +123,7 @@ pre { overflow-x: auto; }
         height: 28px;
         border-bottom: solid var(--title-bar-bottom-line) 1px;
         /* margin: 5px; */
-        
+
         #title {
             position: absolute;
             /* padding-left: 30px; */
@@ -143,21 +190,32 @@ pre { overflow-x: auto; }
                 transform: translate(-50%, -50%);
                 color: var(--header-text);
                 text-shadow: 1px 1px var(--header-shadow),
-                -1px 1px var(--header-shadow),
-                1px -1px var(--header-shadow),
-                -1px -1px var(--header-shadow),
-                2px 2px var(--header-shadow2),
-                -2px 2px var(--header-shadow2),
-                2px -2px var(--header-shadow2),
-                -2px -2px var(--header-shadow2),
-                0px 4px 14px;
+                    -1px 1px var(--header-shadow),
+                    1px -1px var(--header-shadow),
+                    -1px -1px var(--header-shadow),
+                    2px 2px var(--header-shadow2),
+                    -2px 2px var(--header-shadow2),
+                    2px -2px var(--header-shadow2),
+                    -2px -2px var(--header-shadow2),
+                    0px 4px 14px;
             }
         }
 
-        .small { flex: 1 1 15%; }
-        .large { flex: 1 1 85%; }
-        .full { flex: 1 1 100%; }
-        .half { flex: 1 1 50%; }
+        .small {
+            flex: 1 1 15%;
+        }
+
+        .large {
+            flex: 1 1 85%;
+        }
+
+        .full {
+            flex: 1 1 100%;
+        }
+
+        .half {
+            flex: 1 1 50%;
+        }
 
         section {
             border: 1px solid var(--section-outline);
@@ -165,7 +223,14 @@ pre { overflow-x: auto; }
             background-color: var(--section-background);
             margin: 5px;
 
-            p, h1, h2, h3, h4, h5, h6, footer {
+            p,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            footer {
                 padding: 0px 10px;
                 margin-block: 0.5em;
             }
@@ -198,7 +263,8 @@ pre { overflow-x: auto; }
                 font-family: "UbuntuMonospace", monospace;
             }
 
-            ul, ol {
+            ul,
+            ol {
                 margin: 5px;
                 padding: 5px 30px;
                 list-style-type: circle;

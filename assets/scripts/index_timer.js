@@ -7,8 +7,9 @@ function settime() {
         minute: "2-digit",
         second: "2-digit",
         year: "numeric",
-        month: "numeric",
-        day: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+        weekday: "long",
         timeZone: "Europe/Warsaw"
     };
     let pltime = event.toLocaleString(undefined, options)
