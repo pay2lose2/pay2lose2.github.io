@@ -1,5 +1,6 @@
 :root {
     --text-color: rgb(255, 255, 255);
+    --opposite: rgb(0, 0, 0);
     --accent-color: rgb(61, 174, 233);
 
     --window-background: rgb(32, 35, 38);
@@ -60,6 +61,7 @@ body {
 @media (prefers-color-scheme: light) {
     :root {
         --text-color: rgb(0, 0, 0);
+        --opposite: rgb(255, 255, 255);
         --accent-color: rgb(61, 174, 233);
 
         --window-background: rgb(223, 220, 217);

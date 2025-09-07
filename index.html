@@ -2,11 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta property="og:title" content="p2l">
+    <meta property="og:site_name" content="https://pay2lose2.github.io">
+    <meta property="og:image" content="/assets/steamhappy.png">
+    <meta name="theme-color" content="#FF5F00">
+    <meta name="description" content="website where i talk about dumb shit and also STEAMHAPPY">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>[p2l] >> Hello, world!</title>
-    <link rel="stylesheet" href="assets/css/global.css">
-    <link rel="stylesheet" href="assets/css/index.css">
-    <link rel="shortcut icon" href="assets/steamhappy.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="icon" href="/assets/steamhappy.png">
 </head>
 <body>
     <div class="window">
@@ -28,18 +33,18 @@
                     Navigation
                 </div>
 
-                <a href="portfolio.html">
-                    <img src="assets/images/files.svg" id="themechange">
+                <a href="/portfolio.html">
+                    <img src="/assets/images/files.svg" id="themechange">
                     Portfolio
                 </a>
 
-                <a href="blogs.html">
-                    <img src="assets/images/blogs.svg" id="themechange">
+                <a href="/blogs.html">
+                    <img src="/assets/images/blogs.svg" id="themechange">
                     Blogs
                 </a>
 
-                <a href="me.html">
-                    <img src="assets/images/me.svg" id="themechange">
+                <a href="/me.html">
+                    <img src="/assets/images/me.svg" id="themechange">
                     About me
                 </a>
 
@@ -48,17 +53,17 @@
                 </div>
 
                 <a href="https://github.com/pay2lose2">
-                    <img src="assets/images/github.svg" id="themechange">
+                    <img src="/assets/images/github.svg" id="themechange">
                     Github
                 </a>
 
                 <a href="https://youtube.com/@p2l">
-                    <img src="assets/images/youtube.svg">
+                    <img src="/assets/images/youtube.svg">
                     Youtube
                 </a>
 
                 <a href="https://discord.com/users/770355120700653579">
-                    <img src="assets/images/discord.svg">
+                    <img src="/assets/images/discord.svg">
                     Discord
                 </a>
             </nav>
@@ -69,7 +74,7 @@
                     <br><br>
                     This is my personal page where you can learn a bit more about me and also see what I'm up to.
                     <br><Br>
-                    Current time in poland: <span id="time"></span>
+                    Current time: <span id="time"></span>
                     <br>
                     <small>If it doesn't show the correct time, then you can also check it on <a href="https://time.is/warsaw">time.is</a></small>
                 </p>
@@ -90,15 +95,15 @@
             </section>
 
             <section class="audio-player full">
+                <marquee id="track-name" scrollamount="3" aria-label="Auto Pilot - Seventeen.mp3 (NaN)">Auto Pilot - Seventeen.mp3 (NaN)</marquee>
                 <button onclick="playLastSong()">&leftarrow;</button>
-                <marquee id="track-name" scrollamount="3">Auto Pilot - Seventeen.mp3 (NaN)</marquee>
+                <audio id="audio" src="/assets/music/Auto Pilot - Seventeen.mp3" controls autoplay></audio> 
                 <button onclick="playNextSong()">&rightarrow;</button>
-                <audio id="audio" src="./assets/music/Auto Pilot - Seventeen.mp3" controls autoplay></audio> 
                 <!-- will load auto pilot in case where you disabled javascript :thumbs_up: -->
             </section>
 
             <section class="full" id="eightyeightthirtyone">
-                <a href="https://firefox.com"><img src="./assets/88x31/ff.png" alt="firefox.com - lis ogień 🔥🔥🔥🔥"></img></a> 
+                <a href="https://firefox.com"><img src="/assets/88x31/ff.png" alt="firefox.com - lis ogień 🔥🔥🔥🔥"></img></a> 
                 <!-- 
                     <a href="https://vivaldi.com"><img src="./assets/88x31/vivaldi.gif" alt="vivaldi.com"></img></a> 
 
@@ -110,12 +115,13 @@
 
                     I switched to linux where foobar2000 is not supported.
                 -->
-                <a href="https://www.videolan.org/vlc"><img src="./assets/88x31/vlc.png" alt="pachołek vlc"></img></a>
-                <a href="https://code.visualstudio.com"><img src="./assets/88x31/vsc.gif" alt="Visual Studio Code"></img></a>
+                <a href="https://www.videolan.org/vlc"><img src="/assets/88x31/vlc.png" alt="pachołek vlc"></img></a>
+                <a href="https://code.visualstudio.com"><img src="/assets/88x31/vsc.gif" alt="Visual Studio Code"></img></a>
             </section>
         </div>
     </div>
 </body>
-<script src="./assets/scripts/index_timer.js"></script>
-<script src="./assets/scripts/index_song.js"></script>
+<script src="/assets/scripts/index_timer.js"></script>
+<script src="/assets/scripts/index_song.js"></script>
+<script src="/assets/scripts/index_song_visualizer.js"></script>
 </html>

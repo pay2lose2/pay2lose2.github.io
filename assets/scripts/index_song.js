@@ -1,6 +1,6 @@
 const audioElement = document.getElementById('audio');
 const audioTextElement = document.getElementById('track-name');
-const musicFolder = './assets/music/';
+const musicFolder = '/assets/music/';
 const songs = [
     "Armor Mayhem _ Nightkilla - The Maze.mp3",
     "Auto Pilot - Seventeen.mp3",
@@ -36,30 +36,34 @@ const songs = [
 ];
 // if you're going to fork this, then im sorry.
 
-let Index = Math.floor(Math.random() * songs.length);
+let CurrentIndex = Math.floor(Math.random() * songs.length);
 
-function playSong(index) {
+function playSong(Index) {
+    Index = Index || CurrentIndex;
     const song = songs[Index]
     audioElement.src = musicFolder + song;
-    audioTextElement.innerHTML = `${Index+1}. ${song}`
+    audioTextElement.innerHTML = `${CurrentIndex+1}. ${song}`
+    audioElement.title = song;
     audioElement.play();
 }
 
 function playNextSong() {
-    Index++
-    if (Index >= songs.length) {
-        Index = 0
+    CurrentIndex++
+    if (CurrentIndex >= songs.length) {
+        CurrentIndex = 0
     }
-    playSong(Index)
+    playSong(CurrentIndex)
 }
 
 function playLastSong() {
-    Index--
-    if (Index < 0) {
-        Index = songs.length - 1
+    CurrentIndex--
+    if (CurrentIndex < 0) {
+        CurrentIndex = songs.length - 1
     }
-    playSong(Index)
+    playSong(CurrentIndex)
 }
 
 audioElement.addEventListener('ended', playNextSong);
-window.onload = playNextSong;
+window.onload = function() {
+    playSong(CurrentIndex);
+};
