@@ -1,0 +1,81 @@
+:root {
+    --discontinued: rgb(255, 122, 122);
+    --program: rgb(255, 255, 150);
+    --tool: rgb(188, 33, 255);
+    --misc: rgb(122, 122, 255);
+    --planned: rgb(165, 150, 200);
+}
+
+#status-list {
+    align-items: center;
+    align-self: center;
+
+    .program {
+        color: var(--program);
+    }
+
+    .tool {
+        color: var(--tool);
+    }
+
+    .misc {
+        color: var(--misc);
+    }
+
+    span {
+        filter: opacity(25%);
+    }
+}
+
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+
+    div {
+        margin: 3px;
+        background-color: var(--details);
+        flex: 1 1 100%;
+    }
+
+    .discontinued {
+        p::before {
+            content: "(DISCONTINUED)";
+            background-color: var(--discontinued);
+            color: black;
+        }
+    }
+
+    .program {
+        border-left: 3px solid var(--program);
+    }
+
+    .tool {
+        border-left: 3px solid var(--tool);
+    }
+
+    .misc {
+        border-left: 3px solid var(--misc);
+    }
+}
+
+#uiwork {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+
+    div {
+        border: 1px solid var(--border-color);
+        display: flex;
+        flex-direction: row;
+        padding: 3px;
+        
+        img {
+            max-width: 25%;
+            height: auto;
+        }
+    }
+
+    div:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+}

@@ -1,56 +1,43 @@
-:root {
-    --audio-player-button-color: var(--window-outline);
-}
+#eeto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+    gap: 2px;
 
-#eightyeightthirtyone {
-    padding: 5px;
-    display: flexbox;
-    align-items: center;
-    text-align: center;
-    gap: 3px;
+    a {
+        opacity: 70%;
+        transition: opacity 0.2s ease-out;
+    }
 
     a:hover {
-        cursor: pointer;
-        background: none;
-        filter: brightness(80%);
+        background-color: transparent;
+        opacity: 100%;
     }
 }
 
-.audio-player {
-    padding: 5px;
-    text-align: center;
+#vlcplayer {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px;
 
     #track-name {
-        font-family: "UbuntuMonospace", monospace;
+        text-align: center;
         flex: 1 1 100%;
-        font-size: 1rem;
-        /* width: 90%; */
-        margin: 5px 0px;
-        text-shadow: 1px 1px 0 var(--opposite),
-                    -1px 1px 0 var(--opposite),
-                    1px -1px 0 var(--opposite),
-                    -1px -1px 0 var(--opposite); 
-        /* I LOVE CSS REQUIRING 4 VALUES JUST FOR A HALF-DECENT LOOKING TEXT OTULINE. if you have better way of doing this then lmk */
-        transform: scaleY(1.25);
-        transition: text-shadow 0.2s transform;
+    }
+
+    #track {
+        height: 25px;
+        flex: 1 1 90%;
     }
 
     button {
-        background-color: var(--audio-player-button-color);
-        flex: 1 1 1%;
+        height: 25px;
+        background-color: var(--vlcplayer-button);
         border: none;
+        flex: 1 1 3%;
     }
 
     button:hover {
-        filter: brightness(80%);
-    }
-
-    #audio {
-        flex: 1 1 90%;
-        height: 30px;
-        /* width: 100%; */
+        filter: invert();
     }
 }
