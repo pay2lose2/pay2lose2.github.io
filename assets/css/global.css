@@ -1,14 +1,16 @@
 :root {
-    --accent-color: hsl(30, 100%, 70%);
-    --text-color: hsl(30, 100%, 90%);
-    --link-hover-color: hsl(30, 100%, 10%);
+    /*  */
+    --main-hue: 230;
+    --accent-color: hsl(var(--main-hue), 100%, 70%);
+    --text-color: hsl(var(--main-hue), 100%, 90%);
+    --link-hover-color: hsl(var(--main-hue), 100%, 10%);
 
-    --border-color: hsl(30, 12%, 18%);
-    --hr-color: hsl(30, 12%, 18%);
-    --container-color: hsl(30, 12%, 9%);
+    --border-color: hsl(var(--main-hue), 12%, 18%);
+    --hr-color: hsl(var(--main-hue), 12%, 18%);
+    --container-color: hsl(var(--main-hue), 12%, 9%);
 
-    --details: hsl(30, 6%, 14%);
-    --vlcplayer-button: hsl(30, 6%, 14%);
+    --details: hsl(var(--main-hue), 6%, 14%);
+    --vlcplayer-button: hsl(var(--main-hue), 6%, 14%);
 
     --pl1: rgb(255, 255, 255);
     --pl2: rgb(255, 0, 0);
@@ -21,16 +23,16 @@
 
 @media (prefers-color-scheme: light) {
     :root {
-        --accent-color: hsl(30, 100%, 40%);
-        --text-color: hsl(30, 100%, 10%);
-        --link-hover-color: hsl(30, 100%, 90%);
+        --accent-color: hsl(var(--main-hue), 100%, 40%);
+        --text-color: hsl(var(--main-hue), 100%, 10%);
+        --link-hover-color: hsl(var(--main-hue), 100%, 90%);
 
-        --border-color: hsl(30, 12%, 70%);
-        --hr-color: hsl(30, 12%, 70%);
-        --container-color: hsl(30, 18%, 85%);
+        --border-color: hsl(var(--main-hue), 12%, 70%);
+        --hr-color: hsl(var(--main-hue), 12%, 70%);
+        --container-color: hsl(var(--main-hue), 18%, 85%);
 
-        --details: hsl(30, 15%, 90%);
-        --vlcplayer-button: hsl(30, 6%, 90%);
+        --details: hsl(var(--main-hue), 15%, 90%);
+        --vlcplayer-button: hsl(var(--main-hue), 6%, 90%);
     }
 }
 
@@ -106,6 +108,7 @@ body {
         padding: 0;
         white-space: pre;
         width: 100%;
+        line-height: 95%;
 
         span {
             font-family: "Code", monospace;
