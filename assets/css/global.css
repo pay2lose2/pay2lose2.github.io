@@ -1,6 +1,6 @@
 :root {
     /*  */
-    --main-hue: 230;
+    --main-hue: 110;
     --accent-color: hsl(var(--main-hue), 100%, 70%);
     --text-color: hsl(var(--main-hue), 100%, 90%);
     --link-hover-color: hsl(var(--main-hue), 100%, 10%);
